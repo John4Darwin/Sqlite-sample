@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Offer page</h2>
+<div class="row">
+{% for offer in offers %}
+<div class="col md-4">
+<div class="alert alert-danger" role="alert">
+    {{ offer.code }}
+  </div>
+        <div class="alert alert-success" role="alert">
+            {{ offer.discount }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
